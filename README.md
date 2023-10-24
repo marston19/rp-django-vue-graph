@@ -10,9 +10,14 @@ The rest of the tutorial will probably be the same still, maybe using the older 
 This guide is meant to help you get the frontend section of the tutorial working with Vue3 and Apollo, without needing to change the tech stack. All of this was done following the [Vue3](https://v2.vuejs.org/v2/guide/), [vue-router](https://router.vuejs.org/installation.html) and [vue-apollo](https://apollo.vuejs.org/guide-option/setup.html) documentation. Keep in mind, I'm quite new at this so if I made a wrong assumption while writing all of this out, feel free to correct me. 
 
 ---
+
 <h2>Installing Vue and Apollo</h2>
+
 ---
-```
+
+
+```shell
+
 $ npm create vue@latest
 Project name: … frontend
 ...snip...
@@ -22,21 +27,27 @@ Done.
 $ cd frontend
 $ npm install
 $ npm run dev
+
 ```
 
 For our other components, vue-router and Apollo, in your frontend/ directory, run: 
-```
+```shell
+
 $ npm install vue-router@4
 $ npm install --save graphql graphql-tag @apollo/client
 $ npm install --save @vue/apollo-option
+
 ```
 
 ---
+
 <h2>Working with Vue3 and vue-router</h2>
+
 ---
 
 As for router.js, the following worked for me
-```
+```js
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 // All of these include the .vue extension for the SFCs because for me, it wouldn't work otherwise.
@@ -59,15 +70,19 @@ const router = createRouter({
 })
 
 export default router
+
 ```
 
-And again, in main.js, make sure to add these lines.
-```
+In main.js, make sure to add these lines.
+
+```js
+
 ...snip...
 import router from './router'
 ...snip...
 app.use(router)
 ...snip...
+
 ```
 
 ---
@@ -76,7 +91,8 @@ app.use(router)
 
 Add the following lines to main.js
 
-```
+```js
+
 ...snip...
 import { ApolloClient, InMemoryCache } from '@apollo/client/core'
 import { ApolloProvider } from '@vue/apollo-option'
@@ -96,6 +112,7 @@ const apolloProvider = new ApolloProvider({
 ...snip...
 
 app.use(apolloProvider)
+
 ```
 
 The rest of the files remain the same as the tutorial, so this should be able to get you up and running and continue to more important uses of your time, like expanding functionality to the site. Hope this helped!
