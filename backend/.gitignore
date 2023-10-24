@@ -1,0 +1,9 @@
+# No pycaches
+
+**/__pycache__
+
+# No migrations
+**/migrations
+
+# No dbs
+db.sqlite3
