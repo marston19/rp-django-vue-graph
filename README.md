@@ -13,7 +13,7 @@ This guide is meant to help you get the frontend section of the tutorial working
 <h2>Installing Vue and Apollo</h2>
 ---
 
-```
+```shell
 
 $ npm create vue@latest
 Project name: … frontend
@@ -28,7 +28,7 @@ $ npm run dev
 ```
 
 For our other components, vue-router and Apollo, in your frontend/ directory, run: 
-```
+```shell
 
 $ npm install vue-router@4
 $ npm install --save graphql graphql-tag @apollo/client
@@ -41,7 +41,7 @@ $ npm install --save @vue/apollo-option
 ---
 
 As for router.js, the following worked for me
-```
+```js
 
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -68,9 +68,9 @@ export default router
 
 ```
 
-And again, in main.js, make sure to add these lines.
+In main.js, make sure to add these lines.
 
-```
+```js
 
 ...snip...
 import router from './router'
@@ -86,7 +86,7 @@ app.use(router)
 
 Add the following lines to main.js
 
-```
+```js
 
 ...snip...
 import { ApolloClient, InMemoryCache } from '@apollo/client/core'
