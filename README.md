@@ -10,8 +10,11 @@ The rest of the tutorial will probably be the same still, maybe using the older 
 This guide is meant to help you get the frontend section of the tutorial working with Vue3 and Apollo, without needing to change the tech stack. All of this was done following the [Vue3](https://v2.vuejs.org/v2/guide/), [vue-router](https://router.vuejs.org/installation.html) and [vue-apollo](https://apollo.vuejs.org/guide-option/setup.html) documentation. Keep in mind, I'm quite new at this so if I made a wrong assumption while writing all of this out, feel free to correct me. 
 
 ---
+
 <h2>Installing Vue and Apollo</h2>
+
 ---
+
 
 ```shell
 
@@ -37,7 +40,9 @@ $ npm install --save @vue/apollo-option
 ```
 
 ---
+
 <h2>Working with Vue3 and vue-router</h2>
+
 ---
 
 As for router.js, the following worked for me
